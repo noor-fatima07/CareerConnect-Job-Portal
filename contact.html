@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — CareerConnect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="companies.html">Companies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-solid">Sign up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="section-inner">
+    <p class="eyebrow">Get in touch</p>
+    <h1 class="page-title">Questions? We're listening.</h1>
+    <p class="page-sub">Whether you're a candidate stuck mid-application or a company wanting to list roles — send us a note.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner contact-layout">
+
+    <form class="contact-form" id="contactForm">
+      <h3>Send a message</h3>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="cname">Full name</label>
+          <input type="text" id="cname" placeholder="Your name" required>
+        </div>
+        <div class="form-field">
+          <label for="cemail">Email</label>
+          <input type="email" id="cemail" placeholder="you@email.com" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="csubject">Subject</label>
+        <input type="text" id="csubject" placeholder="How can we help?">
+      </div>
+      <div class="form-field">
+        <label for="cmessage">Message</label>
+        <textarea id="cmessage" rows="5" placeholder="Tell us a bit more…" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid" style="width:100%">Send message</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+
+    <aside class="contact-info">
+      <div class="info-card">
+        <span class="mono">Address</span>
+        <p>3rd Floor, Tech Tower, Gulberg III, Lahore, Pakistan</p>
+      </div>
+      <div class="info-card">
+        <span class="mono">Email</span>
+        <p>hello@careerconnect.com</p>
+      </div>
+      <div class="info-card">
+        <span class="mono">Phone</span>
+        <p>+92 300 1234567</p>
+      </div>
+      <div class="map-embed" aria-hidden="true">
+        <span>📍 Map preview</span>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+      <p>Find your dream job today.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Explore</h4>
+        <a href="jobs.html">Browse jobs</a>
+        <a href="companies.html">Companies</a>
+        <a href="about.html">About us</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 CareerConnect. Built as a frontend portfolio project.</div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerConnect — Find Your Dream Job Today</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="companies.html">Companies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-solid">Sign up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">03,417 roles open right now</p>
+      <h1>Your next role<br>is a <span class="hl">path</span>,<br>not a scroll.</h1>
+      <p class="hero-sub">CareerConnect maps the route from application to offer — search real openings, track your progress, and connect directly with the teams hiring for them.</p>
+
+      <form class="search-card" id="searchForm">
+        <div class="search-field">
+          <label for="q">Role or keyword</label>
+          <input type="text" id="q" placeholder="e.g. Frontend Developer">
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-field">
+          <label for="loc">Location</label>
+          <input type="text" id="loc" placeholder="e.g. Lahore, Remote">
+        </div>
+        <button type="submit" class="btn btn-solid search-btn">Search jobs</button>
+      </form>
+
+      <div class="hero-tags">
+        <span>Popular:</span>
+        <button class="chip">UI/UX Design</button>
+        <button class="chip">Frontend</button>
+        <button class="chip">Data Entry</button>
+        <button class="chip">Marketing</button>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 520" class="path-svg">
+        <!-- soft skyline illustration, sits behind the route -->
+        <g class="skyline">
+          <rect x="0"   y="470" width="46" height="50" rx="4"/>
+          <rect x="52"  y="440" width="38" height="80" rx="4"/>
+          <rect x="96"  y="486" width="34" height="34" rx="4"/>
+          <rect x="336" y="450" width="40" height="70" rx="4"/>
+          <rect x="380" y="480" width="36" height="40" rx="4"/>
+          <rect x="300" y="490" width="30" height="30" rx="4"/>
+        </g>
+
+        <path id="routeLine" d="M60 40 C 60 140, 340 100, 300 220 S 60 320, 90 460" />
+
+        <!-- Stage 1 — Apply (resume icon) -->
+        <g class="stop stop-1">
+          <circle cx="60" cy="40" r="16" class="icon-bg"/>
+          <g transform="translate(52,32)">
+            <rect x="0" y="0" width="16" height="18" rx="2" class="icon-shape"/>
+            <line x1="3" y1="5" x2="13" y2="5" class="icon-line"/>
+            <line x1="3" y1="9" x2="13" y2="9" class="icon-line"/>
+            <line x1="3" y1="13" x2="9" y2="13" class="icon-line"/>
+          </g>
+          <text x="86" y="35">Apply</text>
+        </g>
+
+        <!-- Stage 2 — Interview (chat bubble icon) -->
+        <g class="stop stop-2">
+          <circle cx="300" cy="220" r="16" class="icon-bg"/>
+          <g transform="translate(291,211)">
+            <path d="M0 3 Q0 0 3 0 H15 Q18 0 18 3 V11 Q18 14 15 14 H7 L2 18 L3 14 H3 Q0 14 0 11 Z" class="icon-shape"/>
+          </g>
+          <text x="326" y="215">Interview</text>
+        </g>
+
+        <!-- Stage 3 — Offer (flag icon) -->
+        <g class="stop stop-3">
+          <circle cx="90" cy="460" r="16" class="icon-bg"/>
+          <g transform="translate(83,450)">
+            <line x1="1" y1="0" x2="1" y2="20" class="icon-line" stroke-width="2"/>
+            <path d="M2 1 H14 L10 5 L14 9 H2 Z" class="icon-shape"/>
+          </g>
+          <text x="116" y="455">Offer</text>
+        </g>
+      </svg>
+      <div class="visual-card card-a">
+        <span class="mono">FRONTEND ENGINEER</span>
+        <strong>Systems Limited</strong>
+        <span class="tag-status">Interview scheduled</span>
+      </div>
+      <div class="visual-card card-b">
+        <span class="mono">PRODUCT DESIGNER</span>
+        <strong>Arbisoft</strong>
+        <span class="tag-status status-offer">Offer sent</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat"><strong data-count="10400">0</strong><span>Open jobs</span></div>
+    <div class="stat"><strong data-count="512">0</strong><span>Hiring companies</span></div>
+    <div class="stat"><strong data-count="21300">0</strong><span>Candidates placed</span></div>
+    <div class="stat"><strong data-count="98">0</strong><span>% would refer a friend</span></div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="section categories">
+  <div class="section-inner">
+    <p class="eyebrow">Browse by field</p>
+    <h2>Find work that fits your craft</h2>
+    <div class="cat-grid">
+      <a href="jobs.html" class="cat-card">
+        <span class="cat-icon">💻</span>
+        <strong>Software &amp; Web</strong>
+        <span>1,842 openings</span>
+      </a>
+      <a href="jobs.html" class="cat-card">
+        <span class="cat-icon">🎨</span>
+        <strong>Design &amp; Creative</strong>
+        <span>736 openings</span>
+      </a>
+      <a href="jobs.html" class="cat-card">
+        <span class="cat-icon">📊</span>
+        <strong>Marketing &amp; Sales</strong>
+        <span>1,120 openings</span>
+      </a>
+      <a href="jobs.html" class="cat-card">
+        <span class="cat-icon">🛠️</span>
+        <strong>Operations</strong>
+        <span>604 openings</span>
+      </a>
+      <a href="jobs.html" class="cat-card">
+        <span class="cat-icon">📚</span>
+        <strong>Education</strong>
+        <span>389 openings</span>
+      </a>
+      <a href="jobs.html" class="cat-card">
+        <span class="cat-icon">💰</span>
+        <strong>Finance</strong>
+        <span>512 openings</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED JOBS ===== -->
+<section class="section featured">
+  <div class="section-inner">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Fresh this week</p>
+        <h2>Featured openings</h2>
+      </div>
+      <a href="jobs.html" class="link-arrow">View all jobs →</a>
+    </div>
+
+    <div class="job-grid">
+      <article class="job-card">
+        <div class="job-top">
+          <span class="job-logo">SL</span>
+          <span class="job-type">Full-time</span>
+        </div>
+        <h3>Frontend Developer</h3>
+        <p class="job-company">Systems Limited · Lahore</p>
+        <p class="job-desc">Build customer-facing interfaces with React, own component quality and accessibility.</p>
+        <div class="job-tags">
+          <span class="mono">React</span><span class="mono">JavaScript</span><span class="mono">CSS</span>
+        </div>
+        <div class="job-foot">
+          <strong>PKR 120k–180k</strong>
+          <a href="jobs.html" class="btn btn-ghost btn-sm">Apply now</a>
+        </div>
+      </article>
+
+      <article class="job-card">
+        <div class="job-top">
+          <span class="job-logo">10P</span>
+          <span class="job-type">Remote</span>
+        </div>
+        <h3>UI/UX Designer</h3>
+        <p class="job-company">10Pearls · Remote</p>
+        <p class="job-desc">Design end-to-end product flows and design systems for global fintech clients.</p>
+        <div class="job-tags">
+          <span class="mono">Figma</span><span class="mono">Prototyping</span><span class="mono">Design systems</span>
+        </div>
+        <div class="job-foot">
+          <strong>PKR 140k–200k</strong>
+          <a href="jobs.html" class="btn btn-ghost btn-sm">Apply now</a>
+        </div>
+      </article>
+
+      <article class="job-card">
+        <div class="job-top">
+          <span class="job-logo">AR</span>
+          <span class="job-type">Hybrid</span>
+        </div>
+        <h3>Junior Data Analyst</h3>
+        <p class="job-company">Arbisoft · Islamabad</p>
+        <p class="job-desc">Turn raw product data into dashboards and insights the team actually uses.</p>
+        <div class="job-tags">
+          <span class="mono">SQL</span><span class="mono">Excel</span><span class="mono">Power BI</span>
+        </div>
+        <div class="job-foot">
+          <strong>PKR 90k–130k</strong>
+          <a href="jobs.html" class="btn btn-ghost btn-sm">Apply now</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOP COMPANIES ===== -->
+<section class="section companies-strip">
+  <div class="section-inner">
+    <p class="eyebrow">Trusted by teams hiring now</p>
+    <div class="logo-row">
+      <span>Google</span><span>Microsoft</span><span>Amazon</span><span>IBM</span><span>Systems Limited</span><span>10Pearls</span><span>Arbisoft</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials">
+  <div class="section-inner">
+    <p class="eyebrow">Why people choose us</p>
+    <h2>Hired, not just applied</h2>
+    <div class="test-grid">
+      <blockquote class="test-card">
+        <p>"I could actually see where my application stood instead of guessing. Landed an offer in three weeks."</p>
+        <footer><strong>Hina R.</strong><span>Frontend Developer</span></footer>
+      </blockquote>
+      <blockquote class="test-card">
+        <p>"The filters actually understood what I meant by 'remote design roles.' Saved me hours of scrolling."</p>
+        <footer><strong>Bilal A.</strong><span>Product Designer</span></footer>
+      </blockquote>
+      <blockquote class="test-card">
+        <p>"As a hiring manager, the quality of applicants coming through was noticeably higher than other boards."</p>
+        <footer><strong>Sara K.</strong><span>Engineering Manager</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <div>
+      <h2>Get roles before they trend</h2>
+      <p>One email a week. New openings matched to your field, nothing else.</p>
+    </div>
+    <form class="news-form" id="newsForm">
+      <input type="email" placeholder="you@email.com" required>
+      <button type="submit" class="btn btn-solid">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+      <p>Find your dream job today.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Explore</h4>
+        <a href="jobs.html">Browse jobs</a>
+        <a href="companies.html">Companies</a>
+        <a href="about.html">About us</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 CareerConnect. Built as a frontend portfolio project.</div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

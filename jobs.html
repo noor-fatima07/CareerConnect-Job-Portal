@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs — CareerConnect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="jobs.html" class="active">Jobs</a>
+      <a href="companies.html">Companies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-solid">Sign up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="section-inner">
+    <p class="eyebrow" id="resultsCount">14 open roles</p>
+    <h1 class="page-title">Browse every open role</h1>
+    <form class="search-card jobs-search" id="jobsSearchForm">
+      <div class="search-field">
+        <label for="q">Role or keyword</label>
+        <input type="text" id="q" placeholder="e.g. Frontend Developer">
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-field">
+        <label for="loc">Location</label>
+        <input type="text" id="loc" placeholder="e.g. Lahore, Remote">
+      </div>
+      <button type="submit" class="btn btn-solid search-btn">Search</button>
+    </form>
+  </div>
+</section>
+
+<section class="section jobs-section">
+  <div class="section-inner jobs-layout">
+
+    <aside class="filter-sidebar">
+      <h3>Filters</h3>
+
+      <div class="filter-group" data-group="category">
+        <h4>Category</h4>
+        <label class="check"><input type="checkbox" value="Software & Web"> Software &amp; Web</label>
+        <label class="check"><input type="checkbox" value="Design & Creative"> Design &amp; Creative</label>
+        <label class="check"><input type="checkbox" value="Marketing & Sales"> Marketing &amp; Sales</label>
+        <label class="check"><input type="checkbox" value="Operations"> Operations</label>
+        <label class="check"><input type="checkbox" value="Finance"> Finance</label>
+      </div>
+
+      <div class="filter-group" data-group="type">
+        <h4>Job type</h4>
+        <label class="check"><input type="checkbox" value="Full-time"> Full-time</label>
+        <label class="check"><input type="checkbox" value="Part-time"> Part-time</label>
+        <label class="check"><input type="checkbox" value="Remote"> Remote</label>
+        <label class="check"><input type="checkbox" value="Hybrid"> Hybrid</label>
+      </div>
+
+      <div class="filter-group" data-group="experience">
+        <h4>Experience level</h4>
+        <label class="check"><input type="checkbox" value="Internship"> Internship</label>
+        <label class="check"><input type="checkbox" value="Entry level"> Entry level</label>
+        <label class="check"><input type="checkbox" value="Mid level"> Mid level</label>
+        <label class="check"><input type="checkbox" value="Senior"> Senior</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Salary range (PKR)</h4>
+        <input type="range" min="30" max="300" value="30" class="range-input" id="salaryRange">
+        <div class="range-labels"><span>30k</span><span id="salaryValue">Any</span></div>
+      </div>
+
+      <button class="btn btn-ghost" id="clearFilters" style="width:100%">Clear filters</button>
+    </aside>
+
+    <div class="job-list">
+      <div class="job-list-head">
+        <span id="job-count-label">Showing 14 of 14 roles</span>
+        <select class="sort-select">
+          <option>Most relevant</option>
+          <option>Newest first</option>
+          <option>Highest salary</option>
+        </select>
+      </div>
+
+      <div id="jobCards">
+
+      <article class="job-list-card" data-category="Software & Web" data-type="Full-time" data-experience="Entry level" data-min="120" data-max="180">
+        <span class="job-logo">SL</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Frontend Developer</h3><span class="job-type">Full-time</span></div>
+          <p class="job-company">Systems Limited · Lahore</p>
+          <p class="job-desc">Build customer-facing interfaces with React, own component quality and accessibility.</p>
+          <div class="job-tags"><span class="mono">React</span><span class="mono">JavaScript</span><span class="mono">CSS</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 120k–180k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Design & Creative" data-type="Remote" data-experience="Mid level" data-min="140" data-max="200">
+        <span class="job-logo">10P</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>UI/UX Designer</h3><span class="job-type">Remote</span></div>
+          <p class="job-company">10Pearls · Remote</p>
+          <p class="job-desc">Design end-to-end product flows and design systems for global fintech clients.</p>
+          <div class="job-tags"><span class="mono">Figma</span><span class="mono">Prototyping</span><span class="mono">Design systems</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 140k–200k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Software & Web" data-type="Hybrid" data-experience="Entry level" data-min="90" data-max="130">
+        <span class="job-logo">AR</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Junior Data Analyst</h3><span class="job-type">Hybrid</span></div>
+          <p class="job-company">Arbisoft · Islamabad</p>
+          <p class="job-desc">Turn raw product data into dashboards and insights the team actually uses.</p>
+          <div class="job-tags"><span class="mono">SQL</span><span class="mono">Excel</span><span class="mono">Power BI</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 90k–130k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Software & Web" data-type="Full-time" data-experience="Senior" data-min="160" data-max="230">
+        <span class="job-logo">IB</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Backend Engineer</h3><span class="job-type">Full-time</span></div>
+          <p class="job-company">IBM · Karachi</p>
+          <p class="job-desc">Own API design and database performance for a high-traffic enterprise platform.</p>
+          <div class="job-tags"><span class="mono">Node.js</span><span class="mono">PostgreSQL</span><span class="mono">Docker</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 160k–230k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Marketing & Sales" data-type="Full-time" data-experience="Entry level" data-min="100" data-max="150">
+        <span class="job-logo">MS</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Marketing Associate</h3><span class="job-type">Full-time</span></div>
+          <p class="job-company">Microsoft · Islamabad</p>
+          <p class="job-desc">Plan and execute regional campaigns across social, email and partner channels.</p>
+          <div class="job-tags"><span class="mono">SEO</span><span class="mono">Content</span><span class="mono">Analytics</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 100k–150k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Design & Creative" data-type="Remote" data-experience="Senior" data-min="220" data-max="320">
+        <span class="job-logo">GO</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Product Designer</h3><span class="job-type">Remote</span></div>
+          <p class="job-company">Google · Remote</p>
+          <p class="job-desc">Shape the next generation of a widely-used consumer tool from concept to ship.</p>
+          <div class="job-tags"><span class="mono">Figma</span><span class="mono">Research</span><span class="mono">Systems</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 220k–320k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Operations" data-type="Full-time" data-experience="Entry level" data-min="95" data-max="140">
+        <span class="job-logo">AM</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Operations Coordinator</h3><span class="job-type">Full-time</span></div>
+          <p class="job-company">Amazon · Lahore</p>
+          <p class="job-desc">Keep daily fulfillment operations running smoothly across multiple warehouse zones.</p>
+          <div class="job-tags"><span class="mono">Logistics</span><span class="mono">Excel</span><span class="mono">Scheduling</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 95k–140k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Finance" data-type="Full-time" data-experience="Mid level" data-min="130" data-max="190">
+        <span class="job-logo">IB</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Financial Analyst</h3><span class="job-type">Full-time</span></div>
+          <p class="job-company">IBM · Karachi</p>
+          <p class="job-desc">Build forecasting models and monthly reporting for the regional finance team.</p>
+          <div class="job-tags"><span class="mono">Excel</span><span class="mono">Forecasting</span><span class="mono">Reporting</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 130k–190k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Marketing & Sales" data-type="Full-time" data-experience="Internship" data-min="30" data-max="50">
+        <span class="job-logo">MS</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Social Media Intern</h3><span class="job-type">Internship</span></div>
+          <p class="job-company">Microsoft · Islamabad</p>
+          <p class="job-desc">Support content scheduling and community management across platforms.</p>
+          <div class="job-tags"><span class="mono">Canva</span><span class="mono">Scheduling</span><span class="mono">Content</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 30k–50k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Software & Web" data-type="Hybrid" data-experience="Mid level" data-min="170" data-max="240">
+        <span class="job-logo">SL</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>DevOps Engineer</h3><span class="job-type">Hybrid</span></div>
+          <p class="job-company">Systems Limited · Lahore</p>
+          <p class="job-desc">Own CI/CD pipelines and cloud infrastructure reliability for core products.</p>
+          <div class="job-tags"><span class="mono">Docker</span><span class="mono">AWS</span><span class="mono">CI/CD</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 170k–240k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Design & Creative" data-type="Part-time" data-experience="Entry level" data-min="60" data-max="90">
+        <span class="job-logo">AR</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Graphic Designer</h3><span class="job-type">Part-time</span></div>
+          <p class="job-company">Arbisoft · Islamabad</p>
+          <p class="job-desc">Produce marketing visuals and brand assets for client campaigns.</p>
+          <div class="job-tags"><span class="mono">Photoshop</span><span class="mono">Illustrator</span><span class="mono">Branding</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 60k–90k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Marketing & Sales" data-type="Full-time" data-experience="Mid level" data-min="120" data-max="170">
+        <span class="job-logo">AM</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Sales Executive</h3><span class="job-type">Full-time</span></div>
+          <p class="job-company">Amazon · Karachi</p>
+          <p class="job-desc">Manage a portfolio of regional accounts and hit quarterly growth targets.</p>
+          <div class="job-tags"><span class="mono">CRM</span><span class="mono">Negotiation</span><span class="mono">B2B</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 120k–170k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Operations" data-type="Full-time" data-experience="Senior" data-min="150" data-max="210">
+        <span class="job-logo">AM</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Warehouse Operations Lead</h3><span class="job-type">Full-time</span></div>
+          <p class="job-company">Amazon · Lahore</p>
+          <p class="job-desc">Lead a team of coordinators and own daily throughput targets for the site.</p>
+          <div class="job-tags"><span class="mono">Leadership</span><span class="mono">Logistics</span><span class="mono">Process</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 150k–210k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      <article class="job-list-card" data-category="Finance" data-type="Part-time" data-experience="Internship" data-min="40" data-max="60">
+        <span class="job-logo">SL</span>
+        <div class="job-list-body">
+          <div class="job-list-top"><h3>Accounts Payable Clerk</h3><span class="job-type">Part-time</span></div>
+          <p class="job-company">Systems Limited · Lahore</p>
+          <p class="job-desc">Process vendor invoices and reconcile monthly payable statements.</p>
+          <div class="job-tags"><span class="mono">Excel</span><span class="mono">Bookkeeping</span></div>
+        </div>
+        <div class="job-list-side"><strong>PKR 40k–60k</strong><a href="#" class="btn btn-solid btn-sm">Apply now</a></div>
+      </article>
+
+      </div>
+
+      <p class="no-jobs" id="noJobs" style="display:none;">
+        🔍 No jobs match your filters right now — try clearing a filter or searching a different keyword.
+      </p>
+
+      <nav class="pagination" aria-label="Job results pages">
+        <button class="page-btn" disabled>←</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <span>…</span>
+        <button class="page-btn">→</button>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+      <p>Find your dream job today.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Explore</h4>
+        <a href="jobs.html">Browse jobs</a>
+        <a href="companies.html">Companies</a>
+        <a href="about.html">About us</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 CareerConnect. Built as a frontend portfolio project.</div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>

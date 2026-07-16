@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — CareerConnect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="companies.html">Companies</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-solid">Sign up</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="auth-section">
+  <div class="auth-card">
+    <span class="eyebrow">Welcome back</span>
+    <h1>Log in to CareerConnect</h1>
+    <p class="page-sub">Pick up right where you left off — saved jobs, applications and messages.</p>
+
+    <form id="loginForm">
+      <div class="form-field">
+        <label for="lemail">Email</label>
+        <input type="email" id="lemail" placeholder="you@email.com" required>
+      </div>
+      <div class="form-field">
+        <label for="lpass">Password</label>
+        <input type="password" id="lpass" placeholder="••••••••" required>
+      </div>
+      <div class="auth-row">
+        <label class="check"><input type="checkbox"> Remember me</label>
+        <a href="#" class="link-arrow">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn btn-solid" style="width:100%">Log in</button>
+    </form>
+
+    <div class="auth-divider"><span>or continue with</span></div>
+    <div class="auth-social">
+      <button class="btn btn-ghost" style="width:100%">Google</button>
+      <button class="btn btn-ghost" style="width:100%">LinkedIn</button>
+    </div>
+
+    <p class="auth-footer">Don't have an account? <a href="signup.html" class="link-arrow">Sign up</a></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">CC</span>
+      <span class="brand-name">CareerConnect</span>
+      <p>Find your dream job today.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Explore</h4>
+        <a href="jobs.html">Browse jobs</a>
+        <a href="companies.html">Companies</a>
+        <a href="about.html">About us</a>
+      </div>
+      <div>
+        <h4>Account</h4>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 CareerConnect. Built as a frontend portfolio project.</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
